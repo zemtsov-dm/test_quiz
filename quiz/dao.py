@@ -1,9 +1,12 @@
-from datetime import datetime
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy import select, insert
-from sqlalchemy.engine import Result
-from quiz.models import Question
 from collections import deque
+from datetime import datetime
+
+from sqlalchemy import insert, select
+from sqlalchemy.engine import Result
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from quiz.models import Question
+
 from .tools import get_random_question
 
 

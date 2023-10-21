@@ -1,10 +1,13 @@
 from datetime import datetime
-from fastapi import FastAPI, Depends
+
+from fastapi import Depends, FastAPI
 from pydantic import BaseModel
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from quiz.dao import QuestionsDAO
 from quiz.database import get_session
+
 from .tools import get_random_questions
-from sqlalchemy.ext.asyncio import AsyncSession
 
 app = FastAPI()
 

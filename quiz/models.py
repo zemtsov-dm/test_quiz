@@ -1,6 +1,8 @@
 from datetime import datetime
+
+from sqlalchemy import Column, DateTime, Integer, String
+
 from quiz.database import Base
-from sqlalchemy import Column, Integer, String, DateTime
 
 
 class Question(Base):

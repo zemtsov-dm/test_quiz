@@ -1,15 +1,13 @@
-from logging.config import fileConfig
 import sys
+from logging.config import fileConfig
 from os.path import abspath, dirname
 
-from sqlalchemy import engine_from_config
-from sqlalchemy import pool
-
 from alembic import context
+from sqlalchemy import engine_from_config, pool
 
 sys.path.insert(0, dirname(dirname(dirname(abspath(__file__)))))
 
-from quiz.database import Base, DATABASE_URL  # noqa: E402
+from quiz.database import DATABASE_URL, Base  # noqa: E402
 from quiz.models import Question  # noqa: E402, F401
 
 # this is the Alembic Config object, which provides
