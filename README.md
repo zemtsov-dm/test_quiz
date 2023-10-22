@@ -52,7 +52,7 @@ POSTGRES_DB=YOUR_POSTGRES_DB
 DB_HOST="db"
 DB_PORT=5432
 ```
-```
+
 4. Выполните команду (убедитесь что у вас установлен Docker и Docker compose)
 
 ```
