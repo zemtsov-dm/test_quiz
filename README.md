@@ -40,6 +40,7 @@ https://github.com/zemtsov-dm/test_quiz.git
 
 ```
 cd test_quiz
+```
 
 3. Создайте файл .env и заполните необходимые переменные из файла .env.example своими данными
 
