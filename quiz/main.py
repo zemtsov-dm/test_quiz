@@ -7,7 +7,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from quiz.dao import QuestionsDAO
 from quiz.database import get_session
 
-from .tools import get_random_questions
+from quiz.tools import get_random_questions
 
 app = FastAPI()
 
@@ -30,6 +30,6 @@ async def get_quiz_questions(
     return await QuestionsDAO.get_last(session)
 
 
-# if __name__ == "__main__":
-#     import uvicorn
-#     uvicorn.run(app, host="0.0.0.0", port=8000)
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
