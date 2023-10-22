@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from typing import Optional
 from fastapi import Depends, FastAPI
 from pydantic import BaseModel
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -20,7 +21,7 @@ class Question(BaseModel):
     create_date: datetime
 
 
-@app.post("/", response_model=Question)
+@app.post("/", response_model=Optional[Question|None])
 async def get_quiz_questions(
     questions_number: int,
     session: AsyncSession = Depends(get_session),

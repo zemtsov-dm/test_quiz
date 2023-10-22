@@ -11,19 +11,53 @@
 
 http://127.0.0.1:8000/?questions_number=3
 
+```
 payload = {
     "questions_num": 1
 }
+```
 
 Ответ:
 
+```
 {
   "id": 0,
   "question_text": "string",
   "answer_text": "string",
   "create_date": "2023-10-22T07:01:16.916Z"
 }
+```
 
 ## Инструкция по запуску
 
+1. Сначала клонируйте репозиторий
+
+```
+https://github.com/zemtsov-dm/test_quiz.git
+```
+
+2. Перейдите в каталог с проектом:
+
+```
+cd test_quiz
+
+3. Создайте файл .env и заполните необходимые переменные из файла .env.example своими данными
+
+```
+POSTGRES_USER=YOUR_POSTGRES_USER
+POSTGRES_PASSWORD=YOUR_POSTGRES_PASSWORD
+POSTGRES_DB=YOUR_POSTGRES_DB
+
+DB_HOST=YOUR_POSTGRES_HOST
+DB_PORT=5432
+```
+```
+4. Выполните команду (убедитесь что у вас установлен Docker и Docker compose)
+
+```
+docker compose up
+```
+5. Теперь ваш проект должен быть доступен по адресу http://localhost:8000/
+   
+6. Документация доступна по адресу http://localhost:8000/docs
 
